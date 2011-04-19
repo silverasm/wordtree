@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ECOTree Simple Tree 1</title>
+		<script src="wordtree.js"></script>
+		<script src="word-tree-layout.js"></script>
+		<script src="raphael.js"></script>
+		<script src="jquery.js"></script>
+		<script>
+			var myTree = null;
+			function createTree(data) {
+				var context = "yesterday";
+				var rights = [
+				["when", 'a', 'rabbit', 'ate', 'a', 'mouse', "."],
+				["but", 'a', 'rabbit', 'ate', 'a', 'rat', "."],
+				["then", 'a', 'rat', 'ate', 'a', 'mouse', "."],
+				[",", 'the', 'rat', 'ate', 'a', 'mouse', "."],
+				["and", 'the', 'cat', 'ate', 'a', 'mouse', "."],
+				["when", 'the', 'cat', 'ate', 'a', 'mouse', "."],
+				["when",'the', 'cat', 'ate', 'the', 'mouse', "."],
+				];
+				var lefts = [
+				["I", "was", "coming", "home"],
+				["He", "was", "coming", "home", "from", "work"],
+				["I", "was", "coming", "out", "of", "the", "shops"],
+				["While", "I", "was", "going", "home"],
+				["She", "was", "coming", "home"],	
+				];
+				var w = 1000,
+				h = 150,
+				detail = 50 /* % */;
+				var paper = Raphael("test", w, h);
+				makeWordTree(rights, context, detail, "test", w, h, WordTree.RO_LEFT, paper);	
+				makeWordTree(lefts, context, detail, "test", w, h, WordTree.RO_RIGHT, paper);				
+			}
+			$(document).ready(function(){createTree("")});
+		</script>
+	</head>
+	<body>
+		<div id="test"></div>
+	</body>
+</html>

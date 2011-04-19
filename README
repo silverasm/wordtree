@@ -1,0 +1,10 @@
+WordTrees are a way to visualize the contexts in which a word
+occurs in a list of sentences.
+
+wordtree-test.html -- a test file.
+
+word-tree-layout.js -- the tree layout algorithm.
+
+wordtree.js -- tree construction and display.
+
+Enjoy and please hack!

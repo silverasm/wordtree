@@ -11,6 +11,16 @@
 			var myTree = null;
 			function createTree(data) {
 				var context = "yesterday";
+                                var lefts = [
+				["I", "was", "coming", "home"],
+				["He", "was", "coming", "home", "from", "work"],
+				["I", "was", "coming", "out", "of", "the", "shops"],
+				["While", "I", "was", "going", "home"],
+				["She", "was", "coming", "home"],	
+				];
+				for(var i = 0; i < lefts.length; i++){
+					lefts[i] = lefts[i].reverse();
+				}
 				var rights = [
 				["when", 'a', 'rabbit', 'ate', 'a', 'mouse', "."],
 				["but", 'a', 'rabbit', 'ate', 'a', 'rat', "."],
@@ -19,13 +29,6 @@
 				["and", 'the', 'cat', 'ate', 'a', 'mouse', "."],
 				["when", 'the', 'cat', 'ate', 'a', 'mouse', "."],
 				["when",'the', 'cat', 'ate', 'the', 'mouse', "."],
-				];
-				var lefts = [
-				["I", "was", "coming", "home"],
-				["He", "was", "coming", "home", "from", "work"],
-				["I", "was", "coming", "out", "of", "the", "shops"],
-				["While", "I", "was", "going", "home"],
-				["She", "was", "coming", "home"],	
 				];
 				var w = 1000,
 				h = 150,
